@@ -1,0 +1,760 @@
+
+/* ========================================
+   基本設定
+======================================== */
+
+/* すべての要素の余白・サイズ計算をリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ページ全体の設定 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #33302d;
+  background-color: #f7f4ef;
+  line-height: 1.8;
+}
+
+/* 画像が親要素からはみ出さないようにする */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* リンクの下線を消す */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* リストの「・」を消す */
+ul {
+  list-style: none;
+}
+
+
+/* ========================================
+   共通設定
+======================================== */
+
+/* 各セクションの基本設定 */
+.section {
+  padding: 120px 8%;
+}
+
+/* セクション見出し */
+.section-heading {
+  margin-bottom: 60px;
+}
+
+/* 英語の小見出し */
+.section-label {
+  margin-bottom: 15px;
+  color: #8a7767;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+}
+
+/* h2の基本設定 */
+.section-heading h2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   ボタン
+======================================== */
+
+.button {
+  display: inline-block;
+
+  padding: 15px 40px;
+
+  background-color: #8a7767;
+  color: #ffffff;
+
+  font-size: 13px;
+  letter-spacing: 0.15em;
+
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background-color: #6f5f52;
+  transform: translateY(-2px);
+}
+
+/* 白背景用ボタン */
+.button-light {
+  background-color: #ffffff;
+  color: #8a7767;
+}
+
+
+/* ========================================
+   ヘッダー
+======================================== */
+
+/* =========================
+   ヘッダー
+========================= */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 6%;
+
+  background-color: #ffffff;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid #eee8e1;
+}
+
+/* ロゴ */
+.logo {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  letter-spacing: 0.12em;
+}
+
+/* ナビゲーション */
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+/* ナビゲーションの文字 */
+.nav-list a {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  transition: opacity 0.3s;
+}
+
+/* マウスを乗せたとき */
+.nav-list a:hover {
+  opacity: 0.5;
+}
+
+/* ヘッダー予約ボタン */
+.header-button {
+  padding: 10px 20px;
+  background-color: #8a7767;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+
+/* ========================================
+   メインビジュアル
+======================================== */
+
+
+/* メインビジュアルの文章 */
+.mv-content {
+  width: 100%;
+  max-width: 850px;
+  padding: 50px 6%;
+}
+
+/* 小さな英語テキスト */
+.mv-subtitle {
+  margin-bottom: 25px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+}
+
+/* メインタイトル */
+.mv h1 {
+  margin-bottom: 30px;
+
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(30px, 3.5vw, 48px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* メインビジュアルの説明 */
+.mv-text {
+  margin-bottom: 35px;
+  font-size: 15px;
+}
+
+
+/* ========================================
+   コンセプト
+======================================== */
+
+.concept {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+
+  background-color: #ffffff;
+}
+.concept .section-heading h2 {
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+/* コンセプト本文 */
+.concept-content {
+  max-width: 550px;
+  padding-top: 20px;
+}
+
+.concept-content p {
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+
+/* ========================================
+   メニュー
+======================================== */
+
+.menu {
+  background-color: #f7f4ef;
+}
+
+/* メニューを横並びにする */
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* 各メニュー */
+.menu-item {
+  padding: 40px 30px;
+  background-color: #ffffff;
+}
+
+/* メニュー番号 */
+.menu-number {
+  margin-bottom: 20px;
+  color: #8a7767;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+}
+
+/* メニュータイトル */
+.menu-item h3 {
+  margin-bottom: 10px;
+
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+/* 価格 */
+.menu-price {
+  margin-bottom: 25px;
+  color: #8a7767;
+  font-size: 15px;
+}
+
+/* メニュー説明 */
+.menu-item > p:last-child {
+  font-size: 14px;
+}
+
+
+/* ========================================
+   アクセス
+======================================== */
+
+.access {
+  background-color: #ffffff;
+}
+
+/* アクセス情報と地図を横並び */
+.access-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* 店舗名 */
+.access-info h3 {
+  margin-bottom: 30px;
+
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+/* 店舗情報 */
+.access-info dl > div {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+
+  padding: 15px 0;
+  border-bottom: 1px solid #e8ded2;
+}
+
+/* 項目名 */
+.access-info dt {
+  color: #8a7767;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+/* 内容 */
+.access-info dd {
+  font-size: 14px;
+}
+
+/* 地図 */
+.map {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #e8ded2;
+  color: #8a7767;
+}
+
+.map p {
+  margin-bottom: 10px;
+
+  font-family: Georgia, serif;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+}
+
+.map span {
+  font-size: 12px;
+}
+
+
+/* ========================================
+   予約CTA
+======================================== */
+
+.reservation {
+  padding: 120px 8%;
+
+  background-color: #8a7767;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* CTAの見出し */
+.reservation h2 {
+  margin-bottom: 25px;
+
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(32px, 4vw, 50px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* CTAの説明 */
+.reservation-content > p:not(.section-label) {
+  margin-bottom: 35px;
+  font-size: 14px;
+}
+
+
+/* ========================================
+   フッター
+======================================== */
+
+.footer {
+  padding: 60px 8% 30px;
+  background-color: #33302d;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-logo {
+  margin-bottom: 10px;
+
+  font-family: Georgia, serif;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+}
+
+.footer-inner > p:not(.copyright) {
+  margin-bottom: 30px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* フッターナビ */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  margin-bottom: 50px;
+}
+
+.footer-nav a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+/* コピーライト */
+.copyright {
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+
+/* ========================================
+   スマートフォン対応
+======================================== */
+
+
+/* スマートフォン対応 */
+@media (max-width: 600px) {
+
+  /* ヘッダーを2段にする */
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 5%;
+  }
+
+  .logo {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  /* ナビゲーションを2段目に配置 */
+  .nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .nav-list a {
+    font-size: 10px;
+    letter-spacing: 0.03em;
+  }
+
+  .header-button {
+    margin-left: auto;
+    padding: 8px 10px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  /* 各セクションの余白 */
+  .section {
+    padding: 70px 6%;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  /* メイン画像 */
+  .mv {
+    min-height: 520px;
+    padding: 50px 6%;
+    background-position: center;
+  }
+
+  .mv h1 {
+    font-size: 30px;
+  line-height: 1.6;
+  overflow-wrap: normal;
+  }
+
+  .mv-text {
+    font-size: 14px;
+  }
+/* スマホのメイン文章 */
+.mv-content {
+  width: 100%;
+  max-width: none;
+}
+  /* コンセプト */
+  .concept {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .concept-content {
+    padding-top: 0;
+  }
+
+  /* メニュー */
+  .menu-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .menu-item {
+    padding: 25px;
+  }
+
+  .menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  /* アクセス */
+  .access-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .map {
+    min-height: 250px;
+  }
+
+  /* 予約案内 */
+  .reservation {
+    padding: 70px 6%;
+  }
+
+  /* フッター */
+  .footer {
+    padding: 45px 6% 25px;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 15px 20px;
+  }
+}
+
+/* =========================
+   YAMA CAFE 温かいデザイン
+========================= */
+
+/* ページ全体の色 */
+body {
+  color: #49372D;
+  background-color: #F5EFE5;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* ヘッダー */
+.header {
+  background-color: #FDFBF7;
+  border-bottom: 1px solid #E6D8C7;
+}
+
+/* ロゴ */
+.logo {
+  color: #6B4B35;
+  font-weight: bold;
+}
+
+/* メインビジュアル */
+.mv {
+  min-height: 620px;
+  background:
+    linear-gradient(
+      rgba(42, 30, 20, 0.28),
+      rgba(42, 30, 20, 0.28)
+    ),
+    url("image/cafe-main.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+}
+
+/* メインの大見出し */
+.mv h1 {
+  font-size: clamp(30px, 3.5vw, 48px);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* コンセプト */
+.concept {
+  background-color: #FDFBF7;
+}
+
+/* セクションの英語見出し */
+.section-label {
+  color: #8A674B;
+}
+
+/* メニュー */
+.menu {
+  background-color: #F1E6D7;
+}
+
+/* メニューカード */
+
+.menu-item {
+  background-color: #FDFBF7;
+  border-radius: 8px;
+  overflow: hidden;
+
+  /* カードに薄い影をつける */
+  box-shadow: 0 4px 16px rgba(73, 55, 45, 0.08);
+
+  /* マウスを乗せたときの動きをなめらかにする */
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* マウスを乗せたとき */
+.menu-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(73, 55, 45, 0.12);
+}
+
+/* メニュー画像 */
+.menu-item img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* メニュー名 */
+.menu-item h3 {
+  color: #6B4B35;
+}
+
+/* 価格 */
+.menu-price {
+  color: #8A674B;
+  font-weight: bold;
+}
+
+/* アクセス */
+.access {
+  background-color: #FDFBF7;
+}
+
+/* 地図の代わりのエリア */
+.map {
+  background-color: #E5D6C3;
+  color: #6B4B35;
+}
+
+/* ボタン */
+.button,
+.header-button {
+  background-color: #6B7655;
+  color: #FFFFFF;
+  border-radius: 4px;
+}
+/* ボタンにマウスを乗せたとき */
+.button,
+.header-button {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* 通常のボタン */
+.button:hover,
+.header-button:hover {
+  background-color: #566044;
+}
+
+/* 通常のボタンを少し浮かせる */
+.button:hover {
+  transform: translateY(-2px);
+}
+/* ========================================
+   スマホのメインタイトル最終調整
+======================================== */
+
+@media (max-width: 600px) {
+
+  .mv {
+    padding: 50px 6%;
+  }
+
+  .mv-content {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+
+  .mv h1 {
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  .map iframe {
+    height: 250px;
+  }
+
+}
+/* ========================================
+   タブレット対応
+======================================== */
+
+@media (min-width: 601px) and (max-width: 1000px) {
+
+  .menu-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .menu-item {
+    padding: 25px 20px;
+  }
+  /* タブレットのヘッダー */
+.header {
+  flex-wrap: wrap;
+  row-gap: 15px;
+  padding: 15px 6%;
+}
+
+/* ナビゲーションを2段目に配置 */
+.nav {
+  order: 3;
+  width: 100%;
+}
+
+/* ナビゲーションを中央揃え */
+.nav-list {
+  justify-content: center;
+  gap: 35px;
+}
+
+/* ロゴ */
+.logo {
+  font-size: 22px;
+}
+
+}
+
+
+
+
